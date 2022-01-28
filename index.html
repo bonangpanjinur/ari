@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Wilujeng Tepang Taun JANG!!! :)</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+  <div class="container-1">
+    <img src="img/ari3.png" alt="" class="lydia-dp" style="display: none;" id="imagePath" />
+    <h1 class="title-birthday">Coming Soon</h1>
+    <!-- <div class="box-date">Saturday, October 23, 2021</div> -->
+    <!-- <div class="box-date">Time left</div> -->
+    <!-- <p id="demo">
+
+    </p> -->
+    <div class="count-down-wrapper">
+      <div class="item-wrap">
+        <div id="hour-val" class="val">...</div>
+        <div> h</div>
+      </div>
+      <div class="item-wrap">
+        <div id="minute-val" class="val">...</div>
+        <div> m</div>
+      </div>
+      <div class="item-wrap">
+        <div id="second-val" class="val">...</div>
+        <div> s</div>
+      </div>
+    </div>
+
+    <blockquote>"A special time only once a year of you!!!"</blockquote>
+    <style>
+      /* PART 2 START */
+      .container-1 {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .title-birthday {
+        text-align: center;
+        font-weight: 600;
+        color: pink;
+        margin-top: 0;
+        margin-top: -40px;
+      }
+
+      .count-down-wrapper {
+        margin: auto;
+        width: max-content;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 0;
+        /* border: pink 3px solid; */
+      }
+
+      blockquote {
+        text-align: center;
+        font-style: italic;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 0;
+      }
+
+      .count-down-wrapper .item-wrap {
+        margin: 0 12px;
+        border: pink 3px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        flex-direction: column;
+      }
+
+      .count-down-wrapper .item-wrap .val {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      /* PART 2 END */
+    </style>
+  </div>
+  <!-- <audio src="audio/audio.mp3" autoplay loop></audio> -->
+</body>
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Oct 23, 2021 16:10:00");
+
+  // Update the count down every 1 second
+  var x = setInterval(function () {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    // + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      window.open("ari.html", "_self");
+      // document.getElementById("demo").innerHTML = "EXPIRED";
+    } else {
+      document.getElementById("hour-val").innerHTML = hours;
+      document.getElementById("minute-val").innerHTML = minutes;
+      document.getElementById("second-val").innerHTML = seconds;
+    }
+  }, 1000);
+</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script> -->
+<!-- <script type="application/javascript" src="script/main.js"></script> -->
+
+</html>
